@@ -76,15 +76,15 @@
 				<div class="clearfix"></div>
 			</div> <!-- .container -->
 		</div> <!-- .header-body -->
-		<div class="header-bottom" style="background-color: #0277b8;">
+		<div class="header-bottom" style="background-color: #031b52;">
 			<div class="container">
 				<a class="visible-xs beta-menu-toggle pull-right" href="#"><span class='beta-menu-toggle-text'>Menu</span> <i class="fa fa-bars"></i></a>
 				<div class="visible-xs clearfix"></div>
 				<nav class="main-menu">
 					<ul class="l-inline ov">
-						<li><a href="{{route('trang-chu')}}">Trang chủ</a></li>
+						<li><a href="{{route('trang-chu')}}" style="background: #031b52;">Trang chủ</a></li>
 						<!-- đường dẫn trở về trang chủ khi chúng ta kích vào trang chủ -->
-						<li><a href="{{route('trang-chu')}}"> Loại Sản phẩm</a>
+						<li><a href="{{route('trang-chu')}}" style="background: #031b52;"> Loại Sản phẩm</a>
 							<ul class="sub-menu">
 								@foreach($loai_sp as $loai)
 								<li><a href="{{route('loaisanpham',$loai->id)}}">{{$loai->name}}</a></li>
@@ -92,9 +92,9 @@
 								@endforeach
 							</ul>
 						</li>
-						<li><a href="{{route('about')}}">Giới thiệu</a></li>
+						<li><a href="{{route('about')}}" style="background: #031b52;">Giới thiệu</a></li>
 						<!-- đường dẫn trở về trang chủ khi chúng ta kích vào giới thiệu -->
-						<li><a href="{{route('lienhe')}}">Liên hệ</a></li>
+						<li><a href="{{route('lienhe')}}" style="background: #031b52;">Liên hệ</a></li>
 						<!-- đường dẫn trở về trang chủ khi chúng ta kích vào liên hệ -->
 					</ul>
 					<div class="clearfix"></div>

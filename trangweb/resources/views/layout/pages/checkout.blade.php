@@ -19,7 +19,10 @@
 <div class="container">
 	<div id="content">
 
-		<form action="#" method="post" class="beta-form-checkout">
+		<form action="{{ URL::action('PageController@postCheckout') }}" method="POST" role="form" class="beta-form-checkout">
+
+			{{ csrf_field() }}
+			<input type="hidden" name="_token" value="{!! csrf_token() !!}" />
 			<div class="row">
 				<div class="col-sm-6">
 					<h4>Đặt hàng</h4>
@@ -27,7 +30,7 @@
 
 					<div class="form-block">
 						<label for="name">Họ tên*</label>
-						<input type="text" id="name" placeholder="Họ tên" required>
+						<input type="text" id="name" name="name" placeholder="Họ tên" required>
 					</div>
 					<div class="form-block">
 						<label>Giới tính </label>
@@ -38,23 +41,23 @@
 
 					<div class="form-block">
 						<label for="email">Email*</label>
-						<input type="email" id="email" required placeholder="expample@gmail.com">
+						<input type="email" id="email" name="email" required placeholder="expample@gmail.com">
 					</div>
 
 					<div class="form-block">
 						<label for="adress">Địa chỉ*</label>
-						<input type="text" id="adress" placeholder="Street Address" required>
+						<input type="text" id="address" name="address" placeholder="Street Address" required>
 					</div>
 
 
 					<div class="form-block">
 						<label for="phone">Điện thoại*</label>
-						<input type="text" id="phone" required>
+						<input type="text" id="phone" name="phone" required>
 					</div>
 
 					<div class="form-block">
 						<label for="notes">Ghi chú</label>
-						<textarea id="notes"></textarea>
+						<textarea id="notes" name="notes"></textarea>
 					</div>
 				</div>
 				<div class="col-sm-6">
@@ -118,7 +121,7 @@
 							</ul>
 						</div>
 
-						<div class="text-center"><a class="beta-btn primary" href="#">Đặt hàng <i class="fa fa-chevron-right"></i></a></div>
+						<div class="text-center"> <button type="submit" class="btn btn-info">Đặt hàng <i class="fa fa-chevron-right"></i></button></a></div>
 					</div> <!-- .your-order -->
 				</div>
 			</div>

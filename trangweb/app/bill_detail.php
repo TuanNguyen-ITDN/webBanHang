@@ -12,4 +12,5 @@ class bill_detail extends Model
     public function product(){ // ten model cua bang product
     	return $this->hasMany('App\bill_detail','id_bill','id');// thiet lap quan he
     	return $this->hasMany('App\bill_detail','id_product','id');// thiet lap quan he
+    }
 }

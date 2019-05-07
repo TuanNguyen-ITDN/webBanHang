@@ -16,7 +16,7 @@
     </div>
     @endif
     <!-- //Display error -->
-    <form method="post" action="{{URL::action('PageController@editProduct',$product->id)}}" enctype="multipart/form-data">
+    <form method="post" action="{{URL::action('productController@editProduct',$product->id)}}" enctype="multipart/form-data">
         <input type="hidden" name="_token" value="{!! csrf_token() !!}" />
         <div class="row">
             <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2"></div>

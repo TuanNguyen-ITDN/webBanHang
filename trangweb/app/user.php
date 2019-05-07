@@ -9,27 +9,8 @@ use Illuminate\Foundation\Auth\user as Authenticatable;
 
 class user extends  Model
 {
-	use Notifiable;
-	/**
-     * The attributes that are mass assignable.
-     *
-     * @var array
-     */
-    protected $table = 'users'; // khai bao ten bang, bien bang thanh model
-    protected $fillable = ['email', 'password'];
-
-    /**
-     * The attributes that should be hidden for arrays.
-     *
-     * @var array
-     */
-    protected $hidden = [
-        'password', 'remember_token',
-    ];
-
-
-    
-   
+	protected $table = 'users'; // khai bao ten bang, bien bang thanh model
+    protected $fillable = ['full_name', 'email','password','phone', 'address','remember_token']; // ten cua cac truong trong bang do
     public $timestamps=true; // thiet lap timestamp, cho phep su dung
      
 }

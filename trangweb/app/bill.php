@@ -11,4 +11,5 @@ class bill extends Model
     public $timestamps=true; // thiet lap timestamp, cho phep su dung
     public function product(){ // ten model cua bang product
     	return $this->hasMany('App\bill','id_customer','id');// thiet lap quan he
+    }
 }

@@ -30,7 +30,7 @@
 						<div class="beta-products-list">
 							<h4>San pham moi</h4>
 							<div class="beta-products-details">
-								<p class="pull-left">{{count('$sp_theoloai')}}</p>
+								<p class="pull-left"> Tìm Thấy {{count($sp_theoloai)}}</p>
 								<div class="clearfix"></div>
 							</div>
 
@@ -48,8 +48,8 @@
 											</p>
 										</div>
 										<div class="single-item-caption">
-											<a class="add-to-cart pull-left" href="shopping_cart.html"><i class="fa fa-shopping-cart"></i></a>
-											<a class="beta-btn primary" href="{{route('chitiet', $sptl->id)}}">Details <i class="fa fa-chevron-right"></i></a>
+											<a class="add-to-cart pull-left" href="{{route('themgiohang', $sptl->id)}}" data-toggle="tooltip" data-placement="top" title="Add to cart  !"><i class="fa fa-shopping-cart"></i></a>
+											<a class="beta-btn primary" href="{{route('chitiet', $sptl->id)}}" data-toggle="tooltip" data-placement="bottom" title="More Detail  !">Details <i class="fa fa-chevron-right"></i></a>
 											<div class="clearfix"></div>
 										</div>
 									</div>
@@ -63,7 +63,7 @@
 						<div class="beta-products-list">
 							<h4>Top Products</h4>
 							<div class="beta-products-details">
-								<p class="pull-left">438 styles found</p>
+								<p class="pull-left">Tìm thấy {{count($sp_khac)}}</p>
 								<div class="clearfix"></div>
 							</div>
 							<div class="row">

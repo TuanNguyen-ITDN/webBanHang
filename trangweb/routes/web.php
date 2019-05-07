@@ -72,42 +72,35 @@ Route::group(['prefix' => 'backend/'], function () {
 	// Add products
 	Route::get('addProduct', [
 		'as' 	=> 'backend.product.addProduct',
-		'uses' 	=> 'PageController@addProduct'
+		'uses' 	=> 'productController@addProduct'
 	]);
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
 	Route::post('addProduct', [
 		'as' 	=> 'postAdd',
-		'uses' 	=> 'PageController@postAdd'
+		'uses' 	=> 'productController@postAdd'
 	]);
 
 	// Select products by table
 	Route::get('listProduct', [
 		'as' 	=> 'backend.product.getList',
-		'uses' 	=> 'PageController@getListProduct'
-	]);
-	// Select products by thumbanail
-	Route::get('listthum', [
-		'as' 	=> 'backend.product.getthumbanail',
-		'uses' 	=> 'PageController@getthumbanail',
-		 
+		'uses' 	=> 'productController@getListProduct'
 	]);
 	
-
 	// Delete products
 	Route::get('deleteProduct/{id}', [
 		'as' 	=> 'getDeleteProduct',
-		'uses' 	=> 'PageController@deleteProduct'
+		'uses' 	=> 'productController@deleteProduct'
 	]);
 
 	//Edit products
 	Route::get('editProduct/{id}', [
 		'as' 	=> 'backend.product.editProduct',
-		'uses' 	=> 'PageController@editProduct'
+		'uses' 	=> 'productController@editProduct'
 	]);
 
 	Route::post('editProduct/{id}', [
 		'as' 	=> 'backend.product.posteditProduct',
-		'uses' 	=> 'PageController@posteditProduct'
+		'uses' 	=> 'productController@posteditProduct'
 	]);
 
 	// Shopping card
@@ -129,7 +122,6 @@ Route::group(['prefix' => 'backend/'], function () {
 	]);
 
 	// Dang nhap
-	//Edit products
 	Route::get('dangnhap', [
 		'as' 	=> 'dangnhap',
 		'uses' 	=> 'LoginController@getLogin'
@@ -142,7 +134,7 @@ Route::group(['prefix' => 'backend/'], function () {
 
 	Route::get('dangki', [
 		'as' 	=> 'dangki',
-		'uses' 	=> 'LoginController@getSignup'
+		'uses' 	=> 'LoginController@getRegister'
 	]);
 	Route::post('dangki', [
 		'as' 	=> 'dangki',
